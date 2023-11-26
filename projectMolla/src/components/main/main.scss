@@ -1,0 +1,593 @@
+#mainSection {
+    padding: 0px 160px;
+
+    .mainUpBox {
+
+        height: 7vh;
+        width: 100%;
+        display: flex;
+
+        .filterText {
+            height: 7vh;
+            width: 25%;
+            display: flex;
+
+            .filterWord {
+                width: 50%;
+                height: 7vh;
+                padding: 0px 5px;
+            }
+
+            .cleanWord {
+                width: 50%;
+                height: 7vh;
+                display: flex;
+                justify-content: end;
+                padding: 0px 10px;
+
+                p {
+                    color: brown;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        .productAndSort {
+            height: 7vh;
+            width: 75%;
+            display: flex;
+
+            .productBox {
+                width: 55%;
+                height: 7vh;
+                padding: 0px 10px;
+
+                p {
+                    color: gray;
+
+                    span {
+                        color: black;
+                    }
+                }
+            }
+
+            .sortBox {
+                width: 45%;
+                height: 7vh;
+                display: flex;
+
+                .sortWord {
+                    padding: 0px 5px;
+                    height: 7vh;
+                    width: 15%;
+                }
+
+                .sortFilter {
+                    height: 7vh;
+                    width: 45%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .sortSection {
+                        width: 100%;
+                        height: 4vh;
+                        border: 1px solid gray;
+                        color: gray;
+
+                        option {
+                            color: gray;
+                        }
+                    }
+
+                    .sortSection:focus {
+                        outline: none;
+                    }
+                }
+
+                .catagorys {
+                    height: 7vh;
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2px;
+
+                    button {
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: transparent;
+                        border: none;
+
+                        a {
+                            fill: rgba(128, 128, 128, 0.755);
+                            transition: 0.2s;
+
+                        }
+
+                        a:hover {
+                            fill: rgba(0, 0, 0, 0.755);
+                            transition: 0.2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mainDownBox {
+        width: 100%;
+        display: flex;
+
+        .mainLeftBox {
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .accordion {
+                width: 100%;
+                height: 90%;
+
+                .accordion_box {
+                    list-style: none;
+
+                    .arrowClickedBtn {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0px 10px;
+                        align-items: center;
+                        height: 40px;
+                        padding: 0px 10px 5px;
+                        border-bottom: 1px solid gray;
+
+                    }
+
+                    .categoryBox {
+                        transition: 0.5s;
+                        opacity: 0;
+                        max-height: 0px;
+                        input{
+                            accent-color: black;
+                        }
+                        .priceBox{
+                            display: none;
+                            .rangeBox {
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                                gap: 10px;
+    
+                                .priceText {
+                                    color: brown;
+                                }
+                            }
+                        }
+
+                        
+
+                       
+
+                        .checkboxss {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 10px;
+
+                            .brown {
+                                transition: 0.2s;
+                                display: none;
+                                background-color: #b87145;
+                            }
+
+                            .yellow {
+                                transition: 0.2s;
+                                display: none;
+                                background-color: #f0c04a;
+                            }
+
+                            .black {
+                                transition: 0.2s;
+                                display: none;
+                                background-color: black;
+                            }
+
+                            .red {
+                                transition: 0.2s;
+                                display: none;
+                                background-color: red;
+                            }
+
+                            .blue {
+                                transition: 0.2s;
+                                display: none;
+                                background-color: blue;
+                            }
+
+                            .green {
+                                transition: 0.2s;
+                                display: none;
+                                background-color: green;
+                            }
+
+                            .pink {
+                                transition: 0.2s;
+                                display: none;
+                                background-color: pink;
+                            }
+
+                            .white {
+                                transition: 0.2s;
+                                display: none;
+                                background-color: #ebebeb;
+                            }
+
+                            input[type="checkbox"] {
+                                position: relative;
+                                width: 23px;
+                                height: 23px;
+                                border-radius: 50%;
+                                appearance: none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                outline: none;
+                                cursor: pointer;
+                                border: 2px solid white;
+                            }
+
+                            input[type="checkbox"]:checked::before {
+                                content: "\2713";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                font-size: 14px;
+                                color: white;
+                                font-weight: 1000;
+                                line-height: 1;
+                            }
+
+                            input[type="checkbox"]:active {
+                                box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+                            }
+
+
+
+
+
+                        }
+
+                        li {
+                            background-color: white;
+                            display: flex;
+                            align-items: center;
+                            height: 0;
+                            transition: 0.5s;
+                            opacity: 0;
+                        }
+                    }
+
+                    .categoryBox.open {
+                        opacity: 1;
+                        transition: 0.5s;
+                        max-height: 240px;
+
+                        li {
+                            height: 30px;
+                            transition: 0.5s;
+                            opacity: 1;
+
+                        }
+                        .priceBox{
+                            display: block;
+                        }
+
+                        .checkboxss {
+
+                            .brown {
+                                transition: 0.2s;
+                                display: block;
+                                background-color: #b87145;
+                            }
+
+                            .yellow {
+                                transition: 0.2s;
+                                display: block;
+                                background-color: #f0c04a;
+                            }
+
+                            .black {
+                                transition: 0.2s;
+                                display: block;
+                                background-color: black;
+                            }
+
+                            .red {
+                                transition: 0.2s;
+                                display: block;
+                                background-color: red;
+                            }
+
+                            .blue {
+                                transition: 0.2s;
+                                display: block;
+                                background-color: blue;
+                            }
+
+                            .green {
+                                transition: 0.2s;
+                                display: block;
+                                background-color: green;
+                            }
+
+                            .pink {
+                                transition: 0.2s;
+                                display: block;
+                                background-color: pink;
+                            }
+
+                            .white {
+                                transition: 0.2s;
+                                display: block;
+                                background-color: #ebebeb;
+                            }
+
+
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .mainRightBox {
+            min-height: 93vh;
+            width: 75%;
+        }
+    }
+
+}
+
+.cardsBox {
+    min-height: 100%;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    .card {
+        .cardImg {
+            position: relative;
+
+            .cardHover {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: 0.7s;
+
+                .cardHoverUp {
+                    width: 100%;
+                    height: 85%;
+                    display: flex;
+                    justify-content: end;
+
+                    .HoverBtns {
+                        height: 70%;
+                        width: 20%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        
+                        .wishlistBtn {
+                            background-color: white;
+                            color: #c96;
+                            height: 20%;
+                            width: 60%;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transform: translate(0px);
+                            transition: 0.7s;
+                            position: relative;
+                            z-index: 999;
+                            .wishlistBackBox{
+                                right: 0;
+                                position: absolute;
+                                height: 100%;
+                                width: 100%;
+                                top: 0;
+                                z-index: -1;
+                                border-radius: 20px;
+                                transition: 0.7s;
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                                padding: 0px 10px;
+                                p{
+                                transition: 0.7s;
+                                    
+                                opacity: 0;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        .wishlistBtn:hover{
+                            background-color: #b87145;
+                            color: white;
+                            cursor: pointer;
+                            .wishlistBackBox{
+                                background-color: #b87145;
+                                width: 350%;
+                                transition: 0.7s;
+                                p{
+                                transition: 0.7s;
+                                    color: white;
+                                    opacity: 1;
+                                }
+                                
+                            }
+                        }
+                        .otherBtn {
+                            background-color: white;
+                            color: #c96;
+                            height: 20%;
+                            width: 60%;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transform: translate(0px);
+                            transition: 0.7s;
+                        }
+                        .otherBtn:hover{
+                            background-color: #b87145;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .cardHoverDown {
+                    background-color: white;
+                    color: #c96;
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: translateY(10px);
+                    transition: 0.7s;
+                }
+                .cardHoverDown:hover{
+                    background-color: #b87145;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+
+            .status{
+                
+                
+                position: absolute;
+                top: 0px;
+                left: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                .new{
+                    padding: 10px 15px;
+                    background-color: #a6c76c
+                }
+                .top{
+                    padding: 10px 20px;
+                    background-color: #7dd2ea
+                }
+                .stock{
+                    padding: 10px 22px;
+                    font-size: 15px ;
+                    background-color: #ccc
+                }
+            }
+
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .cardImg:hover {
+
+            .cardHover {
+                transition: 0.7s;
+                opacity: 1;
+
+                .cardHoverUp {
+
+                    .HoverBtns {
+                        .wishlistBtn {
+                            transition: 0.7s;
+                            transform: translate(-20px);
+
+                        }
+                        .otherBtn{
+                            transition: 0.7s;
+                            transform: translate(-20px);
+
+                        }
+                    }
+                }
+                .cardHoverDown{
+                    transform: translateY(0px);
+                    transition: 0.7s;
+                }
+            
+
+
+            }
+        }
+
+        .cardText {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0px;
+
+            p {
+                height: 0px;
+            }
+
+            .category {
+                color: gray;
+            }
+
+            .name {
+                margin-top: 10px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .price {
+                margin-top: 30px;
+                color: brown;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.paginationBtn{
+    display: flex !important;
+}
+.chooseBtn{
+    padding: 10px 15px;
+    margin-left: 10px;
+    color: #b87145;
+    border:1px solid #c96;
+    cursor: pointer;
+    background-color: white;
+}
+:where(.css-dev-only-do-not-override-zcfrx9).ant-slider .ant-slider-handle::after {
+    box-shadow: 0 0 0 2px black;
+}
+
+:where(.css-dev-only-do-not-override-zcfrx9).ant-slider .ant-slider-handle:hover::after, :where(.css-dev-only-do-not-override-zcfrx9).ant-slider .ant-slider-handle:active::after, :where(.css-dev-only-do-not-override-zcfrx9).ant-slider .ant-slider-handle:focus::after {
+    box-shadow: 0 0 0 4px black;
+}
+
+:where(.css-dev-only-do-not-override-zcfrx9).ant-slider:hover .ant-slider-handle::after {
+    box-shadow: 0 0 0 2px black;
+}
